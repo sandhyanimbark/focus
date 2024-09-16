@@ -1,0 +1,18 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://eesllc_image_upload_user:AVENHA2bgtW@203.161.57.132:3306/eesllc_image_upload_db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Image {
+  
+  id          Int      @id @default(autoincrement())
+  description String
+  image_data  String   @db.LongText
+
+  @@map("image")
+
+}

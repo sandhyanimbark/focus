@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Night Theme Background */
+.bg-night {
+  background: linear-gradient(to bottom, #0d1f3b, #0d0f1f);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Star Container for Twinkling Effect */
+.star-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent stars from interfering with clicks */
+}
+
+
+/* Individual Stars */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.4);
+  animation: twinkle infinite ease-in-out;
+  opacity: 0.8;
+}
+
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.3);
+  }
+}
+
+
+/* Loader Styles */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #ff4d4d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Card Styles */
+.bg-gray-700 {
+  background-color: #4a5568;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Button Styles */
+.bg-pink-500 {
+  background-color: #ff69b4;
+}
+.bg-red-500 {
+  background-color: #f56565;
+}
+.bg-gray-500 {
+  background-color: #a0aec0;
+}
+.bg-gray-700:hover {
+  background-color: #4a5568;
+}
+
+
+/* Hover Effects */
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+
+/* Button Pop Animation */
+.button-pop {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+.button-pop:hover {
+  background: linear-gradient(to right, #ff4d4d, #ffb3ba);
+  transform: scale(1.05);
+}
