@@ -6,3 +6,8 @@
   package = "@netlify/plugin-nextjs"
 
 
+[functions]
+  node_bundler = "esbuild"
+
+[build.environment]
+  PRISMA_QUERY_ENGINE_LIBRARY = "true"
